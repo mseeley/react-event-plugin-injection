@@ -8,10 +8,10 @@ const paths = {
 };
 
 module.exports = {
-  entry: path.join(paths.SRC, 'app.js'),
+  entry: path.join(paths.SRC, 'index.js'),
   output: {
     path: paths.DIST,
-    filename: 'app.bundle.js'
+    filename: 'index.bundle.js'
   },
   plugins: [
     new HtmlWebpackPlugin({
