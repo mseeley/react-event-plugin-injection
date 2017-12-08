@@ -4,7 +4,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const paths = {
   DIST: path.resolve(__dirname, 'dist'),
-  SRC: path.resolve(__dirname, 'src')
+  SRC: path.resolve(__dirname, 'src'),
+  NODE_MODULES: path.resolve(__dirname, 'node_modules')
 };
 
 module.exports = {
@@ -38,5 +39,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js'],
+    modules: [
+      paths.SRC,
+      paths.NODE_MODULES
+    ]
   }
 };
