@@ -43,5 +43,6 @@ module.exports = {
       paths.SRC,
       paths.NODE_MODULES
     ]
-  }
+  },
+  devtool: 'eval'
 };
