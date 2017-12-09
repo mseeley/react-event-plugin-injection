@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -15,6 +16,9 @@ module.exports = {
     filename: 'index.bundle.js'
   },
   plugins: [
+    new webpack.DefinePlugin({
+      __DEV__: true
+    }),
     new HtmlWebpackPlugin({
       template: path.join(paths.SRC, 'index.html')
     }),
