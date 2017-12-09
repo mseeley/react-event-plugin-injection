@@ -16,7 +16,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(paths.SRC, 'index.html'),
+      template: path.join(paths.SRC, 'index.html')
     }),
     new ExtractTextPlugin('style.bundle.css')
   ],
@@ -26,13 +26,13 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: [
-          'babel-loader',
+          'babel-loader'
         ]
       },
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract({
-          use: 'css-loader',
+          use: 'css-loader'
         })
       }
     ]
